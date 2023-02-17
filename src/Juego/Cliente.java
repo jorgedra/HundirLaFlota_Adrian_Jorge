@@ -68,7 +68,7 @@ public class Cliente {
 				if (barcosRival.isWin()) {
 					//hay que hacer ventana emergente
 					VentanaGanar vg = new VentanaGanar();
-					vc1.setVisible(false);
+					vc1.setVisible(true);
 					vg.setVisible(true);
 					return;
 				}
@@ -82,7 +82,7 @@ public class Cliente {
 					tableroRival.setWin(true);
 					oos.writeObject(tableroRival);
 					VentanaPerder vp = new VentanaPerder();
-					vc1.setVisible(false);
+					vc1.setVisible(true);
 					vp.setVisible(true);
 					return;
 				} else {

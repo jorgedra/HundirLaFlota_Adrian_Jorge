@@ -26,7 +26,7 @@ public class ClienteJugador {
 //		envio
 		final int PUERTO = 6001;
 		try {
-			String hostRemoto = "192.168.3.114";
+			String hostRemoto = "localhost";
 			Socket c1 = new Socket(hostRemoto, PUERTO);
 			VentanaJugador vc1 = new VentanaJugador();
 			vc1.setVisible(true);
@@ -53,7 +53,7 @@ public class ClienteJugador {
 					tableroRival.setWin(true);
 					oos.writeObject(tableroRival);
 					VentanaPerder vp = new VentanaPerder();
-					vc1.setVisible(false);
+					vc1.setVisible(true);
 					vp.setVisible(true);
 					return;
 				} else {
@@ -74,7 +74,7 @@ public class ClienteJugador {
 					ClienteJugador.actualizarBarcosRival(barcosRival);
 					if (barcosRival.isWin()) {
 						VentanaGanar vg = new VentanaGanar();
-						vc1.setVisible(false);
+						vc1.setVisible(true);
 						vg.setVisible(true);
 						return;
 					}
